@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествия - Макет</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        section, header, footer { border: 1px solid #ccc; margin-bottom: 20px; padding: 20px; }
+        .min-height-block { min-height: 200px; }
+        .flex-block { display: flex; flex-direction: column; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #999; padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ПУТЕШЕСТВИЯ</h1>
+        <p>навигация по блокам с якорями</p>
+        <nav>
+            <ul>
+                <li><a href="#country-name">Название страны</a></li>
+                <li><a href="#map">Карта и инфо</a>
+                    <ul>
+                        <li><a href="#description">Описание</a></li>
+                        <li><a href="#weather">Погода</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#feedback">Контакты и вопросы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="country-name">
+            <header>
+                <h2>НАЗВАНИЕ СТРАНЫ</h2>
+                <p>блок &lt;header&gt; со стилями h1, h2, h3</p>
+            </header>
+        </section>
+
+        <section id="map">
+            <h2>Карта регионов</h2>
+            <p>Кликабельное svg-изображение (заглушка)</p>
+        </section>
+
+        <section id="description">
+            <h2>Описание</h2>
+            <p>Красиво оформленный текст. Ниже представлена таблица данных:</p>
+            <table>
+                <tr>
+                    <th>Регион</th>
+                    <th colspan="2">Характеристики</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Центральный</td>
+                    <td>Население: 2млн</td>
+                    <td>Климат: Умеренный</td>
+                </tr>
+                <tr>
+                    <td>Площадь: 500км²</td>
+                    <td>Инфраструктура: Высокая</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="weather" class="min-height-block">
+            <h2>Погода</h2>
+            <p>Прогноз по регионам (блок с min-height)</p>
+        </section>
+
+        <section id="about" class="flex-block">
+            <h2>О нас / о стране</h2>
+            <div style="display: flex; gap: 20px;">
+                <div><strong>10</strong> лет опыта</div>
+                <div><strong>50+</strong> маршрутов</div>
+            </div>
+        </section>
+
+        <section id="feedback">
+            <h2>Форма обратной связи</h2>
+            <form action="#">
+                <fieldset>
+                    <legend>Задать вопрос</legend>
+                    <p><input type="text" placeholder="Ваше имя"></p>
+                    <p><input type="email" placeholder="Email"></p>
+                    <p><textarea placeholder="Ваш вопрос"></textarea></p>
+                    <button type="button">Отправить</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="faq">
+            <h2>FAQ</h2>
+            <details>
+                <summary>Как забронировать тур?</summary>
+                <p>Инструкция по бронированию...</p>
+            </details>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <h2>Контакты</h2>
+        <p>Адрес, телефон и блок &lt;footer&gt;</p>
+    </footer>
+
+</body>
+</html>
