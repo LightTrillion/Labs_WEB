@@ -1,46 +1,175 @@
 <!DOCTYPE html>
+<!-- saved from url=(0048)file:///G:/WEB/laba_1_130226/laba_1_130226.html? -->
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>
             Список дел
         </title>
-        <link rel="icon" href="laba_1_130226_1.png" type="image/x-icon">
+        <link rel="icon" href="file:///G:/WEB/laba_1_130226/laba_1_130226_1.png" type="image/x-icon">
+        <style>
+            /* Подключаем стандартный шрифт без засечек */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #2d4644; /* Темно-зеленый фон как на картинке */
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 600px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            h1 {
+                color: white;
+                font-size: 42px;
+                margin-bottom: 30px;
+            }
+
+            /* Форма и адаптивность кнопок */
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 40px;
+            }
+
+            input[type="text"] {
+                flex: 1 1 300px; /* Базовая ширина инпута */
+                padding: 15px;
+                border: none;
+                outline: none;
+            }
+
+            button[type="submit"] {
+                flex: 1;
+                padding: 15px;
+                border: none;
+                background-color: #d3d3d3;
+                cursor: pointer;
+            }
+
+            button[type="reset"] {
+                flex: 1;
+                padding: 15px;
+                border: none;
+                background-color: #a52a2a;
+                color: black;
+                cursor: pointer;
+            }
+
+            /* Список с прокруткой */
+            ol {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                max-height: 250px;
+                overflow: auto;
+                background: white;
+
+            }
+
+            .item-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 20px;
+                background-color: white;
+                border-bottom: 1px solid #eee;
+                transition: background 0.3s;
+            }
+
+            .item-content > label > span {
+                white-space: nowrap; /* Отменяем переносы текста на следующие строки*/
+                text-overflow: ellipsis; /* Добавляем многоточие при обрезке*/
+                overflow: hidden;
+                width: 85%;
+                text-align: left;
+            }
+
+            /* Цвет и зачеркивание для выполненных (первый элемент на фото) */
+            li:first-child .item-content {
+                background-color: #888;
+                color: white;
+            }
+
+            li:first-child .item-content span {
+                text-decoration: line-through;
+            }
+
+            /* Изменение фона при наведении */
+            .item-content:hover {
+                background-color: #f0f0f0;
+                color: black;
+            }
+
+            .delete-btn {
+                background: none;
+                border: none;
+                font-size: 20px;
+                cursor: pointer;
+                color: #666;
+                text-decoration: none;
+                display: inline-flex;
+            }
+
+            .item-content:hover .delete-btn {
+                color: black; /* Иконка перекрашивается */
+            }
+
+            /* Фраза при пустом списке */
+            ol:empty::after {
+                content: "Не найдено ни одного дела";
+                display: block;
+                color: white;
+                padding: 20px;
+            }
+
+        </style>
     </head>
     <body>
-        <h1>Список дел</h1>
-        <form>
-            <input type="text" placeholder="Новый элемент списка"/>
-            <button type="submit">Создать</button>
-            <button type="reset">Очистить всё</button>
-        </form>
-    <ol>
-        <li>
-            <div class="item-content">
-                <label>
-                    <input type="checkbox">
-                    <span>Почесать кошку</span>
-                </label>
-                <button class="delete-btn">✘</button>
-            </div>
-        </li>
-        <li>
-            <div class="item-content">
-                <label>
-                    <input type="checkbox">
-                    <span>Полить картошку</span>
-                </label>
-                <button class="delete-btn">✘</button>
-            </div>
-        </li>
-        <li>
-            <div class="item-content">
-                <label>
-                    <input type="checkbox">
-                    <span>Сложить в лукошко</span>
-                </label>
-                <button class="delete-btn">✘</button>
-            </div>
-        </li>
-    </ol>
+        <div class="container">
+            <h1>Список дел</h1>
+            <form>
+                <input type="text" placeholder="Новый элемент списка">
+                <button type="submit">Создать</button>
+                <button type="reset">Очистить всё</button>
+            </form>
+            <ol>
+                <li>
+                    <div class="item-content">
+                        <label style="width: 90%; display: flex;">
+                            <input type="checkbox">
+                            <span>Почесать кошку</span>
+                        </label>
+                        <button class="delete-btn">✘</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <label style="width: 90%; display: flex;">
+                            <input type="checkbox">
+                            <span>Полить картошкуааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа</span>
+                        </label>
+                        <button class="delete-btn">✘</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <label style="width: 90%; display: flex;">
+                            <input type="checkbox">
+                            <span>Сложить в лукошко</span>
+                        </label>
+                        <button class="delete-btn">✘</button>
+                    </div>
+                </li>
+            </ol>
+        </div>
     </body>
 </html>
