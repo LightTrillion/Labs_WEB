@@ -1,0 +1,559 @@
+#upside_panel {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    flex-direction: row;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    height: 65px;
+    padding: 0 50px;
+    max-width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://cdn.discordapp.com/attachments/1221756181949845505/1485241434331287652/quartz_block_top.png?ex=69c12660&is=69bfd4e0&hm=6b7fb653d75c81f5d4f7e67292ccd527e662c0c1d55fd0b4eb03972b16c22248&');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    opacity: 0.7;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.titles {
+    font-family: 'Times New Roman', Times, serif;
+}
+.subtitles {
+    font-family: 'Arial', Arial, sans-serif;
+}
+
+#company_up {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+}
+#comp_up_img {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 48px;
+    height: 48px;
+}
+#comp_up_text1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+#comp_up_text2 {
+    font-size: 14px;
+    margin: 0;
+    color: #666;
+}
+
+.nav {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 20px
+}
+.nav a {
+	font-size: 14 px;
+	position: relative;
+	color: #333;
+	text-decoration: none;
+}
+
+.up_feedback {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.phones {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	margin: 10px
+}
+
+.phones .normal_text {
+	font-size: 14px;
+	color: #333;
+	margin: 0;
+}
+
+.pressing_button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* первая секция  */
+.hero_section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    gap: 30px; 
+    padding: 60px 50px;
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.hero_image_center {
+    position: relative;
+    transform: scale(0.9);
+    transform-origin: center bottom;
+    align-self: end;
+}
+
+.hero_image_left {
+    align-self: end;
+}
+
+.hero_image_left img,
+.hero_image_center img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: 3px; 
+    object-fit: cover;
+}
+
+.hero_overlay_title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 96px;
+    color: rgba(97, 192, 97, 0.8);
+    margin: 0;
+    white-space: nowrap;
+    text-align: center;
+    z-index: 10;
+}
+
+.hero_title {
+    font-size: 42px;
+    color: #555;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+.hero_subtitle {
+    font-size: 18px;
+    color: #2e7d32;
+    margin: 0 0 30px 0;
+    line-height: 1.5;
+}
+
+/* секция с 4 услугами  */
+.four_services_sect {
+    padding: 60px 50px;
+}
+
+.four_services_cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.service_card {
+    margin-bottom: 0;
+    width: 420px;
+    text-align: left;
+}
+.card_2, .card_4 {
+    margin-top: 80px;
+}
+
+.service_card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.service_card h3 {
+    font-size: 18px;
+    margin: 20px 0 10px 0;
+    color: #333;
+}
+
+.service_card .description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+
+.service_button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.service_card .service_button {
+    float: right;
+}
+
+.service_button:hover {
+    background-color: #1b5e20;
+}
+
+/* преимущества  */
+
+.advantages_section {
+    padding: 60px 50px;
+}
+
+.advantages_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.advantage_card {
+    flex: 1;
+    padding: 25px 20px;
+    border: 3px solid #b6b4b4;
+    text-align: left;
+}
+
+.advantage_card h3 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.advantage_card p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* популярные услуги */
+.popular_services_section {
+    padding: 60px 50px;
+    text-align: center;
+    max-width: 100%;
+    margin: 0;
+}
+
+.section_title {
+    font-size: 48px;
+    margin: 0 0 30px 0;
+    color: #333;
+    margin-bottom: 10px;
+}
+.section_subsubtitle {
+    text-align: center;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.services_tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab_button {
+    padding: 10px 25px;
+    border: 1px solid #2e7d32;
+    color: #2e7d32;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+.tab_button:hover,
+.tab_button.active {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.popular_services_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.service_item {
+    text-align: left;
+}
+
+.service_item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.service_item_title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.service_item_location {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+.service_item_price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 15px 0;
+}
+
+.service_item_button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.service_item_button:hover {
+    background-color: #1b5e20;
+}
+
+.service_item_list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.service_item_list li {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.service_item_list li::before {
+    content: "•";
+    color: #2e7d32;
+    position: absolute;
+    left: 0;
+}
+
+/* вопросы и тд */
+
+.questions_section {
+    padding: 60px 50px;
+    text-align: center;
+}
+.feedback_form {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.form_inputs {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.form_input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    outline: none;
+}
+
+.form_input:focus {
+    border-color: #2e7d32;
+}
+
+.form_checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+.form_checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.form_button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.manager_text {
+    color: #2e7d32;
+}
+
+.form_button:hover {
+    background-color: #1b5e20;
+}
+
+.garden_section {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.garden_description {
+    font-size: 14px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.garden_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    align-items: center;
+}
+
+.garden_image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+}
+
+.garden_features {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.feature_item h3 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.feature_item p {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* статистика */
+.statistics_section {
+    padding: 100px 50px;
+    background-image: url('https://www.otdelkalux.ru/wp-content/uploads/2024/04/landshaftnyj-dizajn.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.statistics_section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.statistics_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.stat_item {
+    flex: 1;
+    text-align: center;
+    color: white;
+    padding: 30px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.stat_number {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.stat_unit {
+    font-size: 24px;
+    vertical-align: super;
+}
+
+.stat_description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.4;
+}
